@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Card, Button, Page, Grid, Form } from "tabler-react";
+import "tabler-react/dist/Tabler.css";
+import MainCalculator from "./components/MainCalculator";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Page>
+      <Page.Header></Page.Header>
+      <Page.Content>
+        <Card>
+          <Card.Header>
+            <Card.Title>Fair share calculator</Card.Title>
+          </Card.Header>
+          <Card.Body>
+            <MainCalculator></MainCalculator>
+          </Card.Body>
+        </Card>
+      </Page.Content>
+    </Page>
   );
-}
+};
 
 export default App;
