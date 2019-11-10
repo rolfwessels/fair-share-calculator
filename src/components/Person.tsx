@@ -20,5 +20,5 @@ export interface Person {
 
 export interface DescriptionAndAmount {
   description: string;
-  amount: number;
+  amount?: number;
 }
