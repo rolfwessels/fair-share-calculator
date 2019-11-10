@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import { Grid } from "index";
+import { Form } from "tabler-react";
 import { Person } from "./Person";
 
 interface State {}
@@ -10,11 +10,18 @@ interface Prop {
 }
 
 export class PersonView extends Component<Prop, State> {
-  state = {
-    people: [{ name: "Rolf" }, { name: "Nadine" }]
-  };
-
   render() {
-    return <div>ja</div>;
+    var person = this.props.person;
+    return (
+      <div>
+        <Form.FieldSet>
+          <Form.Group>
+            <Form.Label>Name</Form.Label>
+            <Form.Input value={person.name} placeholder="Username" />
+          </Form.Group>
+        </Form.FieldSet>
+        <h2>H</h2>
+      </div>
+    );
   }
 }
